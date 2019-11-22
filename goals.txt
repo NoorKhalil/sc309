@@ -1,0 +1,20 @@
+The goal of our project is 
+
+python equivalent of seurat call scanpy
+
+it uses a different command structure.
+If you are interested in single cell rna seq, you will use scanpy
+
+biopython.org
+
+bioconductor is a group of ???
+
+take a look at bioconda. It is a channel for bioinformatics where you can search around for different tools.
+
+
+
+Step 1: Identify public datasets. We will start with raw single cell RNA sequencing data.
+
+Step 2: Run standard scanpy analysis
+
+Step 3: Will run additional analysis based on expertise and compatibility of datasets
