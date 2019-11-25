@@ -18,3 +18,6 @@ Step 1: Identify public datasets. We will start with raw single cell RNA sequenc
 Step 2: Run standard scanpy analysis
 
 Step 3: Will run additional analysis based on expertise and compatibility of datasets
+
+
+Use Poetry to make a package that installs all dependencies.
