@@ -1,0 +1,8 @@
+README.rst
+setup.py
+poetrytest_package/__init__.py
+poetrytest_package.egg-info/PKG-INFO
+poetrytest_package.egg-info/SOURCES.txt
+poetrytest_package.egg-info/dependency_links.txt
+poetrytest_package.egg-info/requires.txt
+poetrytest_package.egg-info/top_level.txt
