@@ -1,0 +1,7 @@
+README.rst
+setup.py
+sc309/get_poetry.py
+sc309.egg-info/PKG-INFO
+sc309.egg-info/SOURCES.txt
+sc309.egg-info/dependency_links.txt
+sc309.egg-info/top_level.txt
