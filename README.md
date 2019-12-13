@@ -1,15 +1,19 @@
 
 # sc309
-Final python project for BIOF309
+
+Final python project for BIOF309.
+Analysis methods adapted from https://icb-scanpy-tutorials.readthedocs-hosted.com/ using a kidney allograft rejection dataset.
 
 
 
-
-## Installing package
+## Installation instructions
 
 
 ```python
-!pip install -e ../
+
+git clone https://github.com/NoorKhalil/sc309 sc309
+cd sc309
+pip install -e ../
 ```
 
 
