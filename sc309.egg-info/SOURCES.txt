@@ -1,7 +1,7 @@
-README.rst
+README.md
 setup.py
-sc309/filterRegress.py
-sc309/get_poetry.py
+sc309/scanpy_workflow.py
+sc309/scanpy_workflowNoorCopy.py
 sc309/summarystatsplots.py
 sc309.egg-info/PKG-INFO
 sc309.egg-info/SOURCES.txt
