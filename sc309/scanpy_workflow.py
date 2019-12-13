@@ -6,7 +6,7 @@ def filterRegress(SingleCellData):
     """
     Filters genes and cells, normalizes the data, determines highly variable genes, calculates percentage of mitochondrial genes, and regresses out the total counts and mitochondrial percentage.
     """
-
+    assert(str(type(SingleCellData)) == "<class 'anndata.core.anndata.AnnData'>") #Makes sure the Data file has been imported correctly
     sc.pp.filter_cells(SingleCellData, min_genes=200) # Filtering cells with gene count < 200
     sc.pp.filter_genes(SingleCellData, min_cells=3) ## Filtering genes expressed in < 3 cells
      
@@ -34,7 +34,7 @@ def summarystatsplots(SingleCellData):
     """
     Draws violin plots for the number of genes, total RNA counts and mitochondrial percent for each cell, scatter plots for relationships between these parameters and calculate and plot highly variable genes
     """
-    
+    assert(str(type(SingleCellData)) == "<class 'anndata.core.anndata.AnnData'>") #Makes sure the Data file has been imported correctly    
     sc.pl.violin(SingleCellData, ['n_genes', 'n_counts', 'percent_mito'],
              jitter=0.4, multi_panel=True) # Violin plots of number of genes, total counts and mitochondrial percent
     
@@ -48,6 +48,7 @@ def topclustergenes(SingleCellData):
    Performs PCA, compute UMAP and do louvain clustering. Find the genes for each cluster by comparing with the remaining clusters and plots the top 25 genes for each cluster.
     """
 
+    assert(str(type(SingleCellData)) == "<class 'anndata.core.anndata.AnnData'>") #Makes sure the Data file has been imported correctly
     sc.tl.pca(SingleCellData, svd_solver='arpack') # PCA
     sc.pp.neighbors(SingleCellData, n_neighbors=10, n_pcs=10) # Finding neighbors
     
@@ -62,6 +63,7 @@ def visualizegenes(SingleCellData):
    Plots variance explained by each PC, draws expression gradient plots, violin and dot plots for the canonical genes of the kidney and immune cells
     """
 
+    assert(str(type(SingleCellData)) == "<class 'anndata.core.anndata.AnnData'>") #Makes sure the Data file has been imported correctly
     sc.pl.pca_variance_ratio(SingleCellData, log=True) # Variance explained by PCs
     sc.pl.umap(SingleCellData, color=['louvain','NPHS1', 'NKG7', 'WT1', 'FCER1G', 'TYROBP', 'APOE', 'IL1B', 'CD3D', 'GZMA'], size = 50)
     # Checking the expression of canonical genes for kidney and immune cells
