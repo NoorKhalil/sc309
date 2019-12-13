@@ -26,6 +26,9 @@ def filterRegress(SingleCellData):
     sc.pp.regress_out(SingleCellData, ['n_counts', 'percent_mito']) # Regressing out based on total RNA counts and mitochondrial percentage
     
 def summarystatsplots(SingleCellData):
+    """
+    Draws violin plots for the number of genes, total RNA counts and mitochondrial percent for each cell, scatter plots for relationships between these parameters and calculate and plot highly variable genes
+    """
     
     sc.pl.violin(SingleCellData, ['n_genes', 'n_counts', 'percent_mito'],
              jitter=0.4, multi_panel=True) # Violin plots of number of genes, total counts and mitochondrial percent
@@ -36,6 +39,9 @@ def summarystatsplots(SingleCellData):
     sc.pl.highly_variable_genes(SingleCellData) # Plotting highly variable genes (mean expression and dispersion)
     
 def topclustergenes(SingleCellData)
+    """
+   Performs PCA, compute UMAP and do louvain clustering. Find the genes for each cluster by comparing with the remaining clusters and plots the top 25 genes for each cluster.
+    """
 
     sc.tl.pca(SingleCellData, svd_solver='arpack') # PCA
     sc.pp.neighbors(SingleCellData, n_neighbors=10, n_pcs=10) # Finding neighbors
@@ -47,6 +53,9 @@ def topclustergenes(SingleCellData)
     sc.pl.rank_genes_groups(SingleCellData, n_genes=25, sharey=False) # Plotting top 25 genes
     
 def visualizegenes(SingleCellData)
+    """
+   Plots variance explained by each PC, draws expression gradient plots, violin and dot plots for the canonical genes of the kidney and immune cells
+    """
 
     sc.pl.pca_variance_ratio(SingleCellData, log=True) # Variance explained by PCs
     sc.pl.umap(SingleCellData, color=['louvain','NPHS1', 'NKG7', 'WT1', 'FCER1G', 'TYROBP', 'APOE', 'IL1B', 'CD3D', 'GZMA'], size = 50)
