@@ -2,7 +2,9 @@
 # sc309
 
 Final python project for BIOF309.
-Analysis methods adapted from https://icb-scanpy-tutorials.readthedocs-hosted.com/ using a kidney allograft rejection dataset.
+Analysis methods adapted from https://icb-scanpy-tutorials.readthedocs-hosted.com/ using a kidney allograft rejection dataset*.
+
+*Wu, Haojia, et al. "Single-cell transcriptomics of a human kidney allograft biopsy specimen defines a diverse inflammatory response." Journal of the American Society of Nephrology 29.8 (2018): 2069-2080.
 
 
 
