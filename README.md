@@ -8,6 +8,7 @@ Analysis methods adapted from https://icb-scanpy-tutorials.readthedocs-hosted.co
 
 ## Installation instructions
 
+In BASH, run the following commands:
 
 ```python
 
