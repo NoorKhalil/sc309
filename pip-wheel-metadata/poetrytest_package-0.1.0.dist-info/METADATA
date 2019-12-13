@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: poetrytest-package
+Version: 0.1.0
+Summary: 
+Author: noorkhalil
+Author-email: nokhalil1@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: numpy (>=1.17.4,<2.0.0)
+Requires-Dist: pandas (>=0.25.3,<0.26.0)
+Requires-Dist: scanpy (>=1.4.4,<2.0.0)

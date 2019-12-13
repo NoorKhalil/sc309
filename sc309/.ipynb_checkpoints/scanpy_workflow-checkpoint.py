@@ -1,7 +1,12 @@
+import numpy as np
+import pandas as pd
+import scanpy as sc
+
 def filterRegress(SingleCellData):
     """
     Filters genes and cells, normalizes the data, determines highly variable genes, calculates percentage of mitochondrial genes, and regresses out the total counts and mitochondrial percentage.
     """
+
     sc.pp.filter_cells(SingleCellData, min_genes=200) # Filtering cells with gene count < 200
     sc.pp.filter_genes(SingleCellData, min_cells=3) ## Filtering genes expressed in < 3 cells
      
@@ -38,7 +43,7 @@ def summarystatsplots(SingleCellData):
     
     sc.pl.highly_variable_genes(SingleCellData) # Plotting highly variable genes (mean expression and dispersion)
     
-def topclustergenes(SingleCellData)
+def topclustergenes(SingleCellData):
     """
    Performs PCA, compute UMAP and do louvain clustering. Find the genes for each cluster by comparing with the remaining clusters and plots the top 25 genes for each cluster.
     """
@@ -52,7 +57,7 @@ def topclustergenes(SingleCellData)
     sc.tl.rank_genes_groups(SingleCellData, 'louvain', method='wilcoxon') # Finding top genes for each cluster
     sc.pl.rank_genes_groups(SingleCellData, n_genes=25, sharey=False) # Plotting top 25 genes
     
-def visualizegenes(SingleCellData)
+def visualizegenes(SingleCellData):
     """
    Plots variance explained by each PC, draws expression gradient plots, violin and dot plots for the canonical genes of the kidney and immune cells
     """
